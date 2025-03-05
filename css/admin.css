@@ -1,0 +1,170 @@
+/* Admin General Styles */
+.admin-body {
+    background: var(--gradient-primary);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Admin Access Button */
+.admin-access {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.1;
+    transition: opacity 0.3s ease;
+}
+
+.admin-access:hover {
+    opacity: 1;
+}
+
+.admin-btn {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Login Page Styles */
+.admin-login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+}
+
+.admin-login-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Dashboard Styles */
+.admin-dashboard-body {
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.admin-nav {
+    background: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.admin-container {
+    display: flex;
+    min-height: calc(100vh - 70px);
+}
+
+.admin-sidebar {
+    width: 250px;
+    background: white;
+    padding: 2rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.admin-sidebar button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.admin-sidebar button.active {
+    background: var(--color-primary);
+    color: white;
+}
+
+.admin-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.admin-section {
+    display: none;
+}
+
+.admin-section.active {
+    display: block;
+}
+
+/* Form Styles */
+.admin-form {
+    max-width: 600px;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-container {
+        flex-direction: column;
+    }
+
+    .admin-sidebar {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .admin-content {
+        padding: 1rem;
+    }
+}
+
+/* Admin Login Button Styles */
+.admin-submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 15px rgba(26, 35, 126, 0.2);
+}
+
+.admin-submit-btn:hover {
+    background: var(--color-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26, 35, 126, 0.3);
+}
+
+.admin-submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(26, 35, 126, 0.2);
+}
+
+/* Back to Website Link */
+.back-to-site {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.back-to-site:hover {
+    color: var(--color-secondary);
+} 

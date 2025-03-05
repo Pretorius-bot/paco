@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Catalogue - BuildCo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1><a href="index.html">BuildCo</a></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li><a href="index.html#certifications">Certifications</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact" class="cta-button">Contact Us</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Catalogue Section -->
+    <section class="catalogue-section">
+        <div class="catalogue-header">
+            <h2>Our Projects</h2>
+            <div class="catalogue-filter">
+                <a href="#all" class="filter-btn active" data-filter="all">All Projects</a>
+                <a href="#commercial" class="filter-btn" data-filter="commercial">Commercial</a>
+                <a href="#residential" class="filter-btn" data-filter="residential">Residential</a>
+                <a href="#industrial" class="filter-btn" data-filter="industrial">Industrial</a>
+            </div>
+        </div>
+
+        <div class="portfolio-grid" id="projectGrid">
+            <!-- Commercial Projects -->
+            <div class="portfolio-item commercial">
+                <img src="building-new-concrete-house.jpg" alt="Commercial Project 1">
+                <div class="portfolio-overlay">
+                    <h3>Office Complex</h3>
+                    <p>Modern office building in downtown</p>
+                    <a href="#" class="view-project">View Details</a>
+                </div>
+            </div>
+
+            <!-- Residential Projects -->
+            <div class="portfolio-item residential">
+                <img src="construction-site-with-cranes-against-blue-sky.jpg" alt="Residential Project 1">
+                <div class="portfolio-overlay">
+                    <h3>Luxury Homes</h3>
+                    <p>Custom-built residential complex</p>
+                    <a href="#" class="view-project">View Details</a>
+                </div>
+            </div>
+
+            <!-- Industrial Projects -->
+            <div class="portfolio-item industrial">
+                <img src="construction-site.jpg" alt="Industrial Project 1">
+                <div class="portfolio-overlay">
+                    <h3>Manufacturing Facility</h3>
+                    <p>State-of-the-art industrial complex</p>
+                    <a href="#" class="view-project">View Details</a>
+                </div>
+            </div>
+
+            <div class="portfolio-item industrial">
+                <img src="working-hard-building-man-construction-worker.jpg" alt="Industrial Project 2">
+                <div class="portfolio-overlay">
+                    <h3>Manufacturing Facility</h3>
+                    <p>State-of-the-art industrial complex</p>
+                    <a href="#" class="view-project">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-all">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BuildCo</h3>
+                <p>Quality construction services since 1995</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: info@buildco.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p><span id="copyright-trigger">&copy;</span> 2024 BuildCo. All rights reserved.</p>
+            <!-- Hidden admin button -->
+            <div id="admin-access" class="admin-access" style="display: none;">
+                <button class="admin-btn" onclick="window.location.href='admin/login.html'">Admin</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/catalogue.js"></script>
+</body>
+</html> 
