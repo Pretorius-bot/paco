@@ -27,6 +27,7 @@
     padding: 0.5rem 1rem;
     border-radius: 5px;
     cursor: pointer;
+
 }
 
 /* Login Page Styles */
@@ -134,6 +135,7 @@
     background: var(--color-primary);
     color: white;
     border: none;
+    width: 200px;
     border-radius: 25px;
     font-size: 1rem;
     font-weight: 500;
@@ -168,3 +170,25 @@
 .back-to-site:hover {
     color: var(--color-secondary);
 } 
+
+
+.admin-logout-btn{
+        width: 100%;
+        padding: 1rem;
+        background: var(--color-primary);
+        color: white;
+        border: none;
+        width: 200px;
+        border-radius: 25px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 1.5rem;
+        box-shadow: 0 4px 15px rgba(26, 35, 126, 0.2);
+    }
+    .admin-logout-btn:hover {
+        background: var(--color-secondary);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(26, 35, 126, 0.3);
+    }

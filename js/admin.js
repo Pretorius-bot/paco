@@ -76,4 +76,56 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-}); 
+
+    const projectsGrid = document.querySelector('.projects-grid');
+
+    // Fetch and display projects
+    function loadProjects() {
+        // Fetch projects from the server (replace with your API endpoint)
+        fetch('/api/projects')
+            .then(response => response.json())
+            .then(projects => {
+                projectsGrid.innerHTML = '';
+                projects.forEach(project => {
+                    const projectElement = document.createElement('div');
+                    projectElement.classList.add('project-item');
+                    projectElement.innerHTML = `
+                        <h3>${project.title}</h3>
+                        <p>${project.description}</p>
+                        <img src="${project.image}" alt="${project.title}">
+                        <button class="edit-btn" data-id="${project.id}">Edit</button>
+                        <button class="delete-btn" data-id="${project.id}">Delete</button>
+                    `;
+                    projectsGrid.appendChild(projectElement);
+                });
+            });
+    }
+
+    // Handle project deletion
+    projectsGrid.addEventListener('click', (e) => {
+        if (e.target.classList.contains('delete-btn')) {
+            const projectId = e.target.getAttribute('data-id');
+            // Delete project from the server (replace with your API endpoint)
+            fetch(`/api/projects/${projectId}`, { method: 'DELETE' })
+                .then(() => loadProjects());
+        }
+    });
+
+    // Handle project addition
+    addProjectForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(addProjectForm);
+        // Add project to the server (replace with your API endpoint)
+        fetch('/api/projects', {
+            method: 'POST',
+            body: formData
+        })
+        .then(() => {
+            addProjectForm.reset();
+            loadProjects();
+        });
+    });
+
+    // Initial load of projects
+    loadProjects();
+});
