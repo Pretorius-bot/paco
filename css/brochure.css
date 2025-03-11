@@ -1,6 +1,6 @@
 /* Brochure Section on Main Page */
 .brochure-section {
-    padding: 80px 5%;
+    padding: 2rem;
     background: var(--gradient-primary);
     text-align: center;
 }
@@ -41,11 +41,19 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    font-family: Arial, sans-serif;
 }
 
 .brochure-nav {
-    padding: 1rem 0;
+    color: darkblue;
+    padding: 1rem;
+    text-align: center;
     margin-bottom: 2rem;
+}
+
+.brochure-nav .back-btn {
+    color: darkblue;
+    text-decoration: none;
 }
 
 .back-btn {
@@ -56,6 +64,7 @@
 
 .brochure-header {
     text-align: center;
+    padding: 2rem;
     margin-bottom: 4rem;
 }
 
@@ -70,13 +79,15 @@
 }
 
 .highlight-box {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
     gap: 2rem;
     margin: 3rem 0;
 }
 
 .highlight {
+    text-align: center;
     padding: 2rem;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
@@ -89,13 +100,14 @@
 }
 
 .services-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-around;
     gap: 2rem;
     margin: 2rem 0;
 }
 
 .service-item {
+    width: 30%;
     padding: 2rem;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
@@ -113,23 +125,48 @@
     color: var(--color-secondary);
 }
 
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.project-item {
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+.project-item img, .project-item video {
+    max-width: 100%;
+    height: auto;
+}
+
+.responsive-image {
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
 .contact-section {
+    background-color: #f4f4f4;
     text-align: center;
     margin-top: 4rem;
-    padding: 3rem;
+    padding: 2rem;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     backdrop-filter: blur(5px);
 }
 
 .social-links {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .social-link {
-    margin: 0 1rem;
-    color: var(--color-primary);
+    margin: 0 0.5rem;
     text-decoration: none;
+    color: #333;
 }
 
 /* Responsive Design */
@@ -142,4 +179,4 @@
     .brochure-header h1 {
         font-size: 2rem;
     }
-} 
+}
